@@ -34,6 +34,59 @@ fn main() {
 
     let sum = another_function(5,6);
     println!("{}",sum);
+
+    let num = 3;
+    if num < 5 {
+        println!("The number is less than 5");
+    } else if num == 5 {
+        println!("The number is equal to 5");
+    } else{
+        println!("The number is greater than 5");
+    }
+
+    let condition = true;
+    let num = if condition { 10 } else { 20 };
+    let num = if num < 5 { 0 } else { 1 };
+    println!("The value of num is: {}", num);
+
+    let mut count = 0;
+
+    loop{
+        println!("loop again!");
+        count = count + 1;
+        if(count == 5){
+            break;
+        }
+    }
+
+    let mut count = 0;
+    let mut num = 2;
+    // loop with result
+    let result = loop{
+        num = num * 2;
+        println!("loop result again!");
+        count = count + 1;
+        if(count == 5){
+            break num;
+        }
+    };
+    println!("The value of result is: {}", result);
+
+    let mut count = 0;
+    while (count < 5) {
+        count = count + 1;
+        println!("while");
+    }
+
+    let a = [10,20,30,40,50];
+    for element in a.iter() {
+        println!("The value of element is: {}", element);
+    }
+
+    // Range 含左不含右
+    for number in (1..4).rev() {
+        println!("倒计时{}!", number);
+    }
 }
 
 fn another_function(x: i32, y: i32) -> i32 {
